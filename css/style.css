@@ -27,7 +27,7 @@ body{
 
 .logo h1{
 
-    font-family: 'Lobster', cursive;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #3b28a8;
     font-size: 34px;
 }
@@ -142,7 +142,7 @@ section{
     width: 100%;
     font-size: 50px;
     margin: 0;
-    font-family: 'Lobster', cursive;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
     color:#3b28a8,
 
