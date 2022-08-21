@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+     position: fixed;
+    display: flex;
+    flex-flow: row wrap;
+    height: 100px;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.logo{
+    flex: 20%;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.logo h1{
+
+    font-family: 'Lobster', cursive;
+    color: #3b28a8;
+    font-size: 34px;
+}
+
+.menu{
+
+    flex:70%;
+    text-align: right;
+    padding: 20px;
+}
+
+.menu a { 
+    color: #3b28a8;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 16px;
+}
+
+.menu a:hover{
+
+    color: #ff2978;
+    border-top: 4px solid #180F4A;
+}
+
+#botao1{
+    background: #180F4A;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 5px;
+    margin-right: 10%;
+    margin-left: 5%;
+}
+
+#botao1:hover{
+    border: none;
+    background: #ff2978;
+}
+
+.header{
+
+    padding: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    height: auto;
+    background: white;
+}
+
+.headline{
+    margin-left: 10%;
+    flex: 40%;
+
+}
+
+.headline p{
+
+    color: gray;
+    text-align: left;
+}
+
+.img-headline{
+    
+    margin-right: 10%;
+    flex: 40%;
+    /* border: 1px solid pink; */
+    text-align: center;
+}
+
+#img1{
+   max-width: 100%;
+
+}
+
+.headline h2{
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 20px;
+    color:#180F4A;
+    padding: 0;
+    margin: 0;
+}
+.botao2{
+    
+    display: inline-block;
+    background: #ff2978;
+    color: white;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 5px; 
+    text-decoration: none;
+    margin-top: 1%;
+}
+
+.botao2:hover{
+    background: #180F4A ;
+    color: white;
+}
+section{
+
+    display: inline-block;
+    margin-top: 80px;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    padding: 4%;
+   
+}
+.section h2{
+
+    width: 100%;
+    font-size: 50px;
+    margin: 0;
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    color:#3b28a8,
+
+}
+.servicos{
+    display: inline-block;
+    margin-top: 5%;
+}
+
+.card{
+    display: inline-block;
+    width: 30%;
+    padding: 20px;
+    border:1px solid #ff2978;
+    border-radius: 10px;
+    cursor: pointer;
+}   
+
+.textooculto{
+    display: none;
+}
+ 
+.card:hover{
+    background: #ff2978;
+    color: white;
+    padding: 40px;
+}
+
+.card:hover .card-text{
+    display: none;
+}
+
+.card:hover img{
+
+    display: none;
+}
+
+.card:hover .textooculto{
+
+    display: block;
+}
+
+footer{
+    margin-top: 100px;
+    height: 400px;
+    background-image: linear-gradient(180deg, #3b28a8,#090422,black);
+    text-align: center;
+    border-top: 5px solid #ff2978;
+}
+.logo-roda{
+    padding: 100px ;
+}
+.agencia{
+    color: white;
+    margin-bottom: 10px;
+    
+}
+ .whats{
+
+    position: fixed;
+    bottom: 30%;
+    right: 100px;
+    width: 100px;
+    color:#ff2978;
+ }
+
+    
+
+
