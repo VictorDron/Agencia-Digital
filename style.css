@@ -7,6 +7,7 @@
 }
 body{
     font-family: 'Roboto', sans-serif;
+    background: #f7f8fa;
 }
 
 .navbar{
@@ -39,11 +40,43 @@ body{
     padding: 20px;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 5%;
+    z-index: 1001;
+}
+.hamburger span {
+    height: 4px;
+    width: 30px;
+    background: #3b28a8;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: 0.4s;
+}
+
 .menu a { 
     color: #3b28a8;
     text-decoration: none;
     font-size: 20px;
     padding: 20px 16px;
+    transition: color 0.3s, border-top 0.3s;
+    position: relative;
+}
+.menu a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff2978;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.menu a:hover::after {
+    width: 100%;
 }
 
 .menu a:hover{
@@ -59,11 +92,24 @@ body{
     border-radius: 5px;
     margin-right: 10%;
     margin-left: 5%;
+    box-shadow: 0 2px 8px rgba(255,41,120,0.08);
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 #botao1:hover{
     border: none;
     background: #ff2978;
+}
+.botao2, #botao1 {
+    box-shadow: 0 2px 8px rgba(255,41,120,0.08);
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.botao2:hover, #botao1:hover {
+    box-shadow: 0 4px 16px rgba(24,15,74,0.15);
 }
 
 .header{
@@ -87,6 +133,7 @@ body{
 
     color: gray;
     text-align: left;
+    animation: fadeInUp 1.2s;
 }
 
 .img-headline{
@@ -110,6 +157,7 @@ body{
     color:#180F4A;
     padding: 0;
     margin: 0;
+    animation: fadeInDown 1s;
 }
 .botao2{
     
@@ -159,6 +207,12 @@ section{
     border:1px solid #ff2978;
     border-radius: 10px;
     cursor: pointer;
+    box-shadow: 0 4px 24px rgba(59,40,168,0.08);
+    transition: box-shadow 0.3s, background 0.3s, color 0.3s, padding 0.3s;
+    background: #fff;
+    margin: 20px;
+    opacity: 0;
+    transform: translateY(40px);
 }   
 
 .textooculto{
@@ -166,6 +220,7 @@ section{
 }
  
 .card:hover{
+    box-shadow: 0 8px 32px rgba(255,41,120,0.15);
     background: #ff2978;
     color: white;
     padding: 40px;
@@ -191,6 +246,7 @@ footer{
     background-image: linear-gradient(180deg, #3b28a8,#090422,black);
     text-align: center;
     border-top: 5px solid #ff2978;
+    box-shadow: 0 -4px 24px rgba(59,40,168,0.08);
 }
 .logo-roda{
     padding: 100px ;
@@ -208,6 +264,38 @@ footer{
     width: 100px;
     color:#ff2978;
  }
+
+@media (max-width: 1005px) {
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        background: white;
+        width: 60vw;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 20px;
+        border-radius: 0 0 0 20px;
+        z-index: 1000;
+    }
+    .menu.active {
+        display: flex;
+    }
+    .hamburger {
+        display: flex;
+    }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
     
 
