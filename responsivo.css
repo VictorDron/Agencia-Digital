@@ -1,35 +1,309 @@
+/* ========================================
+   RESPONSIVE DESIGN - Mobile First
+   ======================================== */
 
-@media screen and (max-width:1005px) { 
-    .navbar{
-        position: relative;
-    }
-
-    .logo{
-        margin: 0;
-        text-align: center;
-    }
-    .header{
-        padding-top: 10%;
-    }
-    
-    .headline{
-        flex: 100%;
-        margin: 5%;
-        text-align: center;
-    }
-    .headline p{
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
         text-align: center;
     }
 
-    .img-headline{
-        flex: 100%;
-        margin: 5%;
+    .hero-content {
+        order: 1;
+    }
+
+    .hero-visual {
+        order: 2;
+    }
+
+    .hero-description {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .floating-card-1 {
+        left: 10px;
+    }
+
+    .floating-card-2 {
+        right: 10px;
+    }
+
+    .servicos-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .servicos-grid .servico-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .depoimentos-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .depoimentos-grid .depoimento-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .contato-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contato-info .section-title,
+    .contato-info .section-description {
         text-align: center;
     }
-    .card{
+
+    .contato-info .section-description {
+        margin: 0 auto;
+    }
+
+    .contato-details {
+        align-items: center;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    :root {
+        --nav-height: 70px;
+    }
+
+    /* Navbar mobile */
+    .menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--bg-primary);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        z-index: 999;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .nav-link {
+        font-size: 20px;
+        padding: 14px 28px;
+    }
+
+    .btn-nav {
+        margin-top: 8px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .theme-toggle {
+        margin-left: auto;
+        margin-right: 12px;
+    }
+
+    /* Hero mobile */
+    .hero {
+        min-height: auto;
+        padding: calc(var(--nav-height) + 40px) 0 60px;
+    }
+
+    .hero-title {
+        font-size: clamp(28px, 8vw, 40px);
+    }
+
+    .hero-stats {
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    .stat-number {
+        font-size: 26px;
+    }
+
+    .hero-image-wrapper img {
+        height: 280px;
+    }
+
+    .floating-card {
+        display: none;
+    }
+
+    /* Sections mobile */
+    .sobre {
+        padding: 60px 0;
+    }
+
+    .sobre-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .servicos-section {
+        padding: 60px 0;
+    }
+
+    .servicos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .servicos-grid .servico-card:last-child {
+        max-width: 100%;
+    }
+
+    .servico-card {
+        height: 340px;
+    }
+
+    .depoimentos {
+        padding: 60px 0;
+    }
+
+    .depoimentos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .depoimentos-grid .depoimento-card:last-child {
+        max-width: 100%;
+    }
+
+    .contato {
+        padding: 60px 0;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    /* Footer mobile */
+    .footer {
+        padding: 60px 0 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-links {
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    /* WhatsApp */
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .whatsapp-btn svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .scroll-top {
+        bottom: 20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: space-between;
         width: 100%;
     }
-    .whats{
-        display: none;
+
+    .stat {
+        align-items: center;
+        flex: 1;
+    }
+
+    .contato-form {
+        padding: 24px;
+    }
+
+    .sobre-card {
+        padding: 24px;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .animate-on-scroll {
+        opacity: 1;
+        transform: none;
+    }
+
+    html {
+        scroll-behavior: auto;
     }
 }
