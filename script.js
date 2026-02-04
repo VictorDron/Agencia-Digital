@@ -39,11 +39,8 @@
     });
 
     // ---- Navbar scroll effect ----
-    let lastScroll = 0;
     window.addEventListener('scroll', () => {
-        const currentScroll = window.scrollY;
-        navbar.classList.toggle('scrolled', currentScroll > 50);
-        lastScroll = currentScroll;
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
     }, { passive: true });
 
     // ---- Dark Mode ----
