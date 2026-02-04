@@ -4,122 +4,404 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Um site exemplo">
-    <meta name ="keywords" content="agencia digital,css,html">
+    <meta name="description" content="Solaris - Agencia digital especializada em sites, apps e sistemas web. Transformamos ideias em experiencias digitais.">
+    <meta name="keywords" content="agencia digital, desenvolvimento web, aplicativos, sistemas web, marketing digital">
+    <meta name="author" content="Solaris">
+    <meta property="og:title" content="Solaris - Agencia Digital">
+    <meta property="og:description" content="Transformamos ideias em experiencias digitais incriveis.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsivo.css">
-    <title>Agência</title>
+    <title>Solaris - Agencia Digital</title>
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="logo">
-          <h1>SOLARIS</h1>
-        </div>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">S</span>
+                <span class="logo-text">SOLARIS</span>
+            </a>
 
-        <div class="menu" id="menu">
-            <a href="#">Home</a>
-            <a href="#">Sobre Nós</a>
-            <a href="#">Serviços</a>
-            <a id="botao1" href="#">Fale conosco</a>
-        </div>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+            <div class="menu" id="menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#sobre" class="nav-link">Sobre</a>
+                <a href="#servicos" class="nav-link">Servicos</a>
+                <a href="#depoimentos" class="nav-link">Depoimentos</a>
+                <a href="#contato" class="nav-link btn-nav">Fale conosco</a>
+            </div>
+
+            <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
-    <header class="header">
-
-        <div class="headline">
-            <h2 style="letter-spacing: 15px;">Você achou a melhor</h2>
-            <h2 style="font-size: 80px;">Agência digital</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit voluptates natus maiores commodi harum magni repellat, nulla ipsum cupiditate quis perspiciatis impedit quod repellendus iste voluptatibus praesentium incidunt ducimus tempora.</p>
-             <a href="#" class="botao2">Contrate agora</a>
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
         </div>
-
-        <div class="img-headline">
-            <img id="img1" src="img1.jpg">
-
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-badge animate-on-scroll">Agencia Digital #1</span>
+                <h1 class="hero-title animate-on-scroll">
+                    Transformamos ideias em
+                    <span class="gradient-text" id="typingText">experiencias digitais</span>
+                </h1>
+                <p class="hero-description animate-on-scroll">
+                    Somos especialistas em criar solucoes digitais que impulsionam negocios.
+                    Do conceito ao lancamento, nossa equipe transforma sua visao em realidade.
+                </p>
+                <div class="hero-buttons animate-on-scroll">
+                    <a href="#contato" class="btn btn-primary">
+                        Comece seu projeto
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a href="#servicos" class="btn btn-outline">Nossos servicos</a>
+                </div>
+                <div class="hero-stats animate-on-scroll">
+                    <div class="stat">
+                        <span class="stat-number" data-count="150">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Projetos entregues</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="98">0</span><span class="stat-plus">%</span>
+                        <span class="stat-label">Clientes satisfeitos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Anos de experiencia</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual animate-on-scroll">
+                <div class="hero-image-wrapper">
+                    <img src="img1.jpg" alt="Solaris Agencia Digital" loading="lazy">
+                    <div class="hero-image-overlay"></div>
+                </div>
+                <div class="floating-card floating-card-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    <span>Performance +89%</span>
+                </div>
+                <div class="floating-card floating-card-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    <span>+2.4k usuarios</span>
+                </div>
+            </div>
         </div>
-
-    
     </header>
 
-    <section>
-        <h2>O que podemos fazer pelo seu negócio?</h2>
-        <div class="servicos">
-            <div class="card">
-                <img src="web.png">
-
-                <div class="card-text">
-                <h3>Desenvolvimento de SITES</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut odit ex? Sed, molestias! Aut cupiditate ullam iste reprehenderit? Molestiae reprehenderit quaerat voluptatum iste eos quod qui reiciendis magnam odio!</p>  
-                </div>
-
-                <div class="textooculto">
-                    <h3>MAIS</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut odit ex? Sed, molestias! Aut cupiditate ullam iste reprehenderit? Molestiae reprehenderit quaerat voluptatum iste eos quod qui reiciendis magnam odio!</p>  
-                </div>
-
+    <!-- Sobre Section -->
+    <section class="sobre" id="sobre">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge">Quem somos</span>
+                <h2 class="section-title">Por que escolher a <span class="gradient-text">Solaris</span>?</h2>
+                <p class="section-description">Combinamos criatividade, tecnologia e estrategia para entregar resultados excepcionais.</p>
             </div>
-
-
-
-            <div class="card">
-                <img src="app.png">
-
-                <div class="card-text">
-                    <h3>Desenvolvimento de APPS</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut odit ex? Sed, molestias! Aut cupiditate ullam iste reprehenderit? Molestiae reprehenderit quaerat voluptatum iste eos quod qui reiciendis magnam odio!</p>  
-                    
+            <div class="sobre-grid">
+                <div class="sobre-card animate-on-scroll">
+                    <div class="sobre-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                    </div>
+                    <h3>Tecnologia de Ponta</h3>
+                    <p>Utilizamos as frameworks e ferramentas mais modernas do mercado para garantir performance e escalabilidade.</p>
                 </div>
-
-                <div class="textooculto">
-                    <h3>MAIS</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut odit ex? Sed, molestias! Aut cupiditate ullam iste reprehenderit? Molestiae reprehenderit quaerat voluptatum iste eos quod qui reiciendis magnam odio!</p>  
+                <div class="sobre-card animate-on-scroll">
+                    <div class="sobre-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Seguranca Garantida</h3>
+                    <p>Seus dados e projetos protegidos com as melhores praticas de seguranca e criptografia do mercado.</p>
                 </div>
-
-            </div>
-
-
-            <div class="card">
-                <img src="ia.png">
-
-                <div class="card-text">
-                    <h3>Desenvolvimento de SISTEMAS WEB</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut odit ex? Sed, molestias! Aut cupiditate ullam iste reprehenderit? Molestiae reprehenderit quaerat voluptatum iste eos quod qui reiciendis magnam odio!</p>  
+                <div class="sobre-card animate-on-scroll">
+                    <div class="sobre-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3>Entrega Rapida</h3>
+                    <p>Metodologia agil para garantir que seu projeto seja entregue no prazo, sem comprometer a qualidade.</p>
                 </div>
-
-                <div class="textooculto">
-                    <h3>MAIS</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aut odit ex? Sed, molestias! Aut cupiditate ullam iste reprehenderit? Molestiae reprehenderit quaerat voluptatum iste eos quod qui reiciendis magnam odio!</p>  
+                <div class="sobre-card animate-on-scroll">
+                    <div class="sobre-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Suporte Dedicado</h3>
+                    <p>Equipe de suporte disponivel para ajudar em todas as etapas, do planejamento a manutencao continua.</p>
                 </div>
-
             </div>
         </div>
-
     </section>
 
-    <footer>
+    <!-- Servicos Section -->
+    <section class="servicos-section" id="servicos">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge">Nossos servicos</span>
+                <h2 class="section-title">O que podemos fazer pelo <span class="gradient-text">seu negocio</span>?</h2>
+                <p class="section-description">Solucoes completas para transformar sua presenca digital e impulsionar seus resultados.</p>
+            </div>
+            <div class="servicos-grid">
+                <div class="servico-card animate-on-scroll">
+                    <div class="servico-card-inner">
+                        <div class="servico-front">
+                            <div class="servico-icon">
+                                <img src="web.png" alt="Desenvolvimento de Sites">
+                            </div>
+                            <h3>Desenvolvimento de Sites</h3>
+                            <p>Sites modernos, rapidos e otimizados para conversao e SEO.</p>
+                            <span class="servico-cta">Saiba mais &rarr;</span>
+                        </div>
+                        <div class="servico-back">
+                            <h3>Sites Profissionais</h3>
+                            <ul class="servico-features">
+                                <li>Design responsivo e moderno</li>
+                                <li>Otimizacao para SEO</li>
+                                <li>Alta performance e velocidade</li>
+                                <li>Integracoes com APIs</li>
+                                <li>Painel administrativo</li>
+                            </ul>
+                            <a href="#contato" class="btn btn-small">Solicitar orcamento</a>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="logo-roda">
+                <div class="servico-card animate-on-scroll">
+                    <div class="servico-card-inner">
+                        <div class="servico-front">
+                            <div class="servico-icon">
+                                <img src="app.png" alt="Desenvolvimento de Apps">
+                            </div>
+                            <h3>Desenvolvimento de Apps</h3>
+                            <p>Aplicativos nativos e hibridos para iOS e Android.</p>
+                            <span class="servico-cta">Saiba mais &rarr;</span>
+                        </div>
+                        <div class="servico-back">
+                            <h3>Apps Mobile</h3>
+                            <ul class="servico-features">
+                                <li>Apps nativos iOS e Android</li>
+                                <li>Apps hibridos multiplataforma</li>
+                                <li>UI/UX intuitivo</li>
+                                <li>Notificacoes push</li>
+                                <li>Publicacao nas lojas</li>
+                            </ul>
+                            <a href="#contato" class="btn btn-small">Solicitar orcamento</a>
+                        </div>
+                    </div>
+                </div>
 
-            <h1 class="agencia" >SOLARIS</h1>
-
+                <div class="servico-card animate-on-scroll">
+                    <div class="servico-card-inner">
+                        <div class="servico-front">
+                            <div class="servico-icon">
+                                <img src="ia.png" alt="Sistemas Web">
+                            </div>
+                            <h3>Sistemas Web</h3>
+                            <p>Sistemas robustos e escalaveis para automatizar processos.</p>
+                            <span class="servico-cta">Saiba mais &rarr;</span>
+                        </div>
+                        <div class="servico-back">
+                            <h3>Sistemas Completos</h3>
+                            <ul class="servico-features">
+                                <li>Dashboards interativos</li>
+                                <li>Automacao de processos</li>
+                                <li>Integracao com ERPs</li>
+                                <li>APIs RESTful</li>
+                                <li>Hospedagem em nuvem</li>
+                            </ul>
+                            <a href="#contato" class="btn btn-small">Solicitar orcamento</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <b style="color: white;">© Todos os direitos reservados</b>
+    <!-- Depoimentos Section -->
+    <section class="depoimentos" id="depoimentos">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-badge">Depoimentos</span>
+                <h2 class="section-title">O que nossos <span class="gradient-text">clientes dizem</span></h2>
+                <p class="section-description">A satisfacao dos nossos clientes e a nossa maior motivacao.</p>
+            </div>
+            <div class="depoimentos-grid">
+                <div class="depoimento-card animate-on-scroll">
+                    <div class="depoimento-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="depoimento-text">"A Solaris superou todas as nossas expectativas. O site ficou incrivel e nossas vendas aumentaram 40% no primeiro mes!"</p>
+                    <div class="depoimento-author">
+                        <div class="author-avatar">MR</div>
+                        <div>
+                            <strong>Marcos Ribeiro</strong>
+                            <span>CEO, TechBrasil</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento-card animate-on-scroll">
+                    <div class="depoimento-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="depoimento-text">"Profissionalismo de alto nivel. O app que desenvolveram para nos e utilizado por milhares de pessoas diariamente."</p>
+                    <div class="depoimento-author">
+                        <div class="author-avatar">AS</div>
+                        <div>
+                            <strong>Ana Santos</strong>
+                            <span>Diretora, Inova+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento-card animate-on-scroll">
+                    <div class="depoimento-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="depoimento-text">"O sistema web que a Solaris criou automatizou 80% dos nossos processos. Recomendo para qualquer empresa."</p>
+                    <div class="depoimento-author">
+                        <div class="author-avatar">PL</div>
+                        <div>
+                            <strong>Pedro Lima</strong>
+                            <span>Fundador, DataFlow</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section class="contato" id="contato">
+        <div class="section-container">
+            <div class="contato-wrapper">
+                <div class="contato-info animate-on-scroll">
+                    <span class="section-badge">Contato</span>
+                    <h2 class="section-title">Vamos construir algo <span class="gradient-text">incrivel juntos</span>?</h2>
+                    <p class="section-description">Entre em contato e vamos discutir como podemos ajudar seu negocio a crescer no mundo digital.</p>
+                    <div class="contato-details">
+                        <div class="contato-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <span>contato@solaris.com.br</span>
+                        </div>
+                        <div class="contato-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <span>(21) 96589-5734</span>
+                        </div>
+                        <div class="contato-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>Rio de Janeiro, RJ - Brasil</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contato-form animate-on-scroll" id="contatoForm">
+                    <div class="form-group">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="servico">Servico de interesse</label>
+                        <select id="servico" name="servico" required>
+                            <option value="" disabled selected>Selecione um servico</option>
+                            <option value="site">Desenvolvimento de Site</option>
+                            <option value="app">Desenvolvimento de App</option>
+                            <option value="sistema">Sistema Web</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Conte-nos sobre seu projeto..." rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        Enviar mensagem
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">S</span>
+                        <span class="logo-text">SOLARIS</span>
+                    </a>
+                    <p>Transformando ideias em experiencias digitais incriveis desde 2020.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="#" aria-label="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Servicos</h4>
+                    <a href="#servicos">Desenvolvimento Web</a>
+                    <a href="#servicos">Apps Mobile</a>
+                    <a href="#servicos">Sistemas Web</a>
+                    <a href="#servicos">Consultoria Digital</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Empresa</h4>
+                    <a href="#sobre">Sobre nos</a>
+                    <a href="#depoimentos">Depoimentos</a>
+                    <a href="#contato">Contato</a>
+                    <a href="#">Politica de Privacidade</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Solaris. Todos os direitos reservados.</p>
+            </div>
+        </div>
     </footer>
-    <a target="_blank" href="https://api.whatsapp.com/send?1=pt_BR&phone=5521965895734"><img class="whats" src="logo whats.png"></a>
+
+    <!-- WhatsApp Button -->
+    <a class="whatsapp-btn" target="_blank" href="https://api.whatsapp.com/send?1=pt_BR&phone=5521965895734" aria-label="Fale conosco pelo WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
     <script src="script.js"></script>
-    
-
-
-    
 </body>
-
-
-
 </html>
